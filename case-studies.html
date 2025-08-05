@@ -1,38 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Case Studies - Vega IT Services</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <title>Case Studies | Vega IT Services</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">Vega IT Services</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Vega IT Logo">
+        </div>
+        <nav>
+            <a href="index.html#services">Services</a>
+            <a href="case-studies.html" class="active">Case Studies</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
 
-  <section class="case-studies">
-    <h1>Real-World IT Lessons for Small Businesses</h1>
-    <article>
-      <h2>Phishing Attack Exposes 140,000 Records</h2>
-      <p>Imperium Health was breached after a phishing attack compromised employee credentials...</p>
-    </article>
-    <article>
-      <h2>Former Employee Still Had Access</h2>
-      <p>A city failed to disable credentials for a terminated employee, leading to a serious HIPAA violation...</p>
-    </article>
-    <article>
-      <h2>Weak Password, Ransomware, and Shutdown</h2>
-      <p>British transport company KNP was shut down due to ransomware exploiting a weak employee password...</p>
-    </article>
-  </section>
+    <main class="case-studies">
+        <h1>Case Studies</h1>
+        <div class="study">
+            <h2>Healthcare Practice: HIPAA Violation Fines</h2>
+            <p>A Phoenix-based clinic was fined $125,000 for failing to encrypt patient records. Vega IT Services helped a similar practice avoid violations by implementing encryption, patch automation, and access controls.</p>
+        </div>
+        <div class="study">
+            <h2>Dental Office Ransomware Attack</h2>
+            <p>A Tempe office lost all patient data due to a ransomware attack. We helped a similar client implement real-time backups, advanced threat protection, and network segmentation.</p>
+        </div>
+        <div class="study">
+            <h2>Small Law Firm IT Overhaul</h2>
+            <p>A 5-attorney firm had outdated hardware and no centralized data access. Vega IT Services designed a hybrid cloud solution with secure VPN, managed Microsoft 365, and encrypted backups.</p>
+        </div>
+        <div class="study">
+            <h2>Veterinary Clinic Network Overhaul</h2>
+            <p>We rebuilt the network for a vet office plagued with dead zones and printer issues. Full Ubiquiti deployment with VLAN segmentation and remote monitoring resolved it.</p>
+        </div>
+    </main>
 
-  <footer>
-    <p>© 2025 Vega IT Services</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Vega IT Services | Phoenix, AZ</p>
+    </footer>
 </body>
 </html>
