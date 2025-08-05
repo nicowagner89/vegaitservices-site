@@ -1,64 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vega IT Services</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <div class="logo">Vega IT Services</div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#case-studies">Case Studies</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vega IT Services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs" defer></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .slide-panel {
+        transition: transform 0.4s ease;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-950 text-white font-sans">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+          <img src="assets/images/VegaIT-Clean.png" alt="Vega IT Logo" class="h-10 w-auto" />
+          <span class="text-xl font-bold">Vega IT Services</span>
+        </div>
+        <nav class="hidden md:flex gap-8 text-sm">
+          <a href="#services" class="hover:text-blue-400">Services</a>
+          <button @click="caseStudiesOpen = true" class="hover:text-blue-400">Case Studies</button>
+          <a href="#contact" class="hover:text-blue-400">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-  <section class="hero">
-    <h1>Flat-Rate IT for Small Businesses</h1>
-    <p>Secure. Local. No Outsourcing.</p>
-    <a href="#contact" class="cta-btn">Schedule a Consultation</a>
-  </section>
+    <!-- Main -->
+    <main class="pt-32">
+      <!-- Hero -->
+      <section class="text-center py-24 px-6">
+        <h1 class="text-5xl font-bold mb-4">Flat-Rate IT for Small Businesses</h1>
+        <p class="text-lg text-gray-400 mb-8">Secure. Local. No Outsourcing.</p>
+        <a href="#contact" class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition">Schedule a Consultation</a>
+      </section>
 
-  <section id="services" class="services">
-    <h2>What We Offer</h2>
-    <ul>
-      <li>Helpdesk Support</li>
-      <li>Networking & Wi-Fi</li>
-      <li>Server & Active Directory Setup</li>
-      <li>Cybersecurity & Endpoint Protection</li>
-      <li>HIPAA Compliance Assistance</li>
-      <li>Patch Management</li>
-    </ul>
-  </section>
+      <!-- Services -->
+      <section id="services" class="bg-gray-900 py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-8">What We Offer</h2>
+          <div class="grid md:grid-cols-2 gap-8 text-left">
+            <ul class="space-y-3 text-gray-300">
+              <li>• Helpdesk Support</li>
+              <li>• Networking & Wi-Fi</li>
+              <li>• Server & Active Directory Setup</li>
+              <li>• Cybersecurity & Endpoint Protection</li>
+            </ul>
+            <ul class="space-y-3 text-gray-300">
+              <li>• HIPAA Compliance Assistance</li>
+              <li>• Patch Management</li>
+              <li>• ManageEngine Monitoring</li>
+              <li>• Flat Monthly Fee ($2500)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-  <section id="case-studies">
-    <h2>Why IT Security Matters</h2>
-    <details>
-      <summary>Real Case Studies of Businesses That Got Burned</summary>
-      <ul>
-        <li>📧 Phishing attack leaked 140,000 patient records</li>
-        <li>🧑‍💼 Ex-employee stole data after termination</li>
-        <li>🔒 Ransomware hit due to weak password</li>
-      </ul>
-      <a href="case-studies.html">Read full case studies</a>
-    </details>
-  </section>
+      <!-- Contact -->
+      <section id="contact" class="py-20 px-6">
+        <div class="max-w-xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
+          <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+            <input type="text" name="name" placeholder="Your Name" class="w-full p-3 rounded bg-gray-800 border border-gray-700" required />
+            <input type="email" name="email" placeholder="Your Email" class="w-full p-3 rounded bg-gray-800 border border-gray-700" required />
+            <textarea name="message" rows="4" placeholder="Tell us how we can help." class="w-full p-3 rounded bg-gray-800 border border-gray-700" required></textarea>
+            <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Tell us how we can help." required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-6 text-center text-gray-500 border-t border-gray-800">
+      © 2025 Vega IT Services | Phoenix, AZ
+    </footer>
 
-  <footer>
-    <p>© 2025 Vega IT Services | Phoenix, AZ</p>
-  </footer>
-</body>
+    <!-- Slide-In Panel -->
+    <div x-data="{ caseStudiesOpen: false }">
+      <div
+        x-show="caseStudiesOpen"
+        class="fixed inset-0 bg-black/70 z-50 flex justify-end"
+        @click.away="caseStudiesOpen = false"
+      >
+        <div
+          class="slide-panel bg-gray-900 w-full max-w-3xl p-8 overflow-y-auto shadow-xl"
+          x-show="caseStudiesOpen"
+          x-transition:enter="transform transition ease-in-out duration-300"
+          x-transition:enter-start="translate-x-full"
+          x-transition:enter-end="translate-x-0"
+          x-transition:leave="transform transition ease-in-out duration-300"
+          x-transition:leave-start="translate-x-0"
+          x-transition:leave-end="translate-x-full"
+        >
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold">Case Studies</h2>
+            <button @click="caseStudiesOpen = false" class="text-gray-400 hover:text-white">&times;</button>
+          </div>
+          <div class="space-y-6 text-gray-300">
+            <div>
+              <h3 class="text-xl font-semibold">Healthcare Practice: HIPAA Violation Fines</h3>
+              <p class="text-sm mt-2">A Phoenix-based clinic was fined $125,000 for failing to encrypt patient records. Vega IT Services helped a similar practice secure all systems and avoid violations by implementing endpoint encryption, patch automation, and access controls.</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">Dental Office Ransomware Attack</h3>
+              <p class="text-sm mt-2">A Tempe dental office lost all patient records to a ransomware attack. Vega IT Services offers real-time patching and threat detection to prevent these breaches in other client environments.</p>
+            </div>
+            <!-- Add more if needed -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
