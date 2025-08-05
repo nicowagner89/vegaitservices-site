@@ -1,155 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vega IT Services</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-50 text-gray-800" x-data="{ open: false }">
-    <!-- Header -->
-    <header class="bg-white shadow sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        <img src="VegaIT-Clean.png" alt="Vega IT Logo" class="h-12" />
-        <nav class="hidden md:flex space-x-8 font-medium">
-          <a href="#services" class="hover:text-blue-600">Services</a>
-          <button @click="open = true" class="hover:text-blue-600">Case Studies</button>
-          <a href="#contact" class="hover:text-blue-600">Contact</a>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vega IT Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <style>
+    .hero-bg {
+      background: linear-gradient(to bottom right, #1e3a8a, #2563eb);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  <!-- Header -->
+  <header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+    <img src="VegaIT-Clean.png" alt="Vega IT Logo" class="h-12 w-auto" />
+    <nav class="space-x-6 font-medium">
+      <a href="#services" class="hover:text-blue-600">Services</a>
+      <button @click="showCase = true" class="hover:text-blue-600">Case Studies</button>
+      <a href="#contact" class="hover:text-blue-600">Contact</a>
+    </nav>
+  </header>
 
-    <!-- Hero -->
-    <section class="bg-gradient-to-b from-blue-900 to-blue-700 text-white py-24 text-center">
-      <div class="max-w-3xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Flat-Rate IT for Small Businesses</h1>
-        <p class="mb-6 text-lg">Secure. Local. No Outsourcing.</p>
-        <a
-          href="#contact"
-          class="inline-block bg-orange-400 text-white font-semibold py-3 px-6 rounded shadow hover:bg-orange-500 transition"
-          >Schedule a Consultation</a
-        >
-      </div>
-    </section>
+  <!-- Hero -->
+  <section class="hero-bg text-white text-center py-24">
+    <h1 class="text-4xl md:text-5xl font-bold">Flat-Rate IT for Small Businesses</h1>
+    <p class="mt-4 text-lg">Secure. Local. No Outsourcing.</p>
+    <a href="#contact" class="mt-6 inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded shadow transition-all">Schedule a Consultation</a>
+  </section>
 
-    <!-- Services -->
-    <section id="services" class="py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-10">What We Offer</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
-            <h3 class="font-semibold text-lg mb-2">Helpdesk Support</h3>
-            <p>Responsive IT support to resolve technical issues quickly.</p>
-          </div>
-          <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
-            <h3 class="font-semibold text-lg mb-2">Networking & Wi-Fi</h3>
-            <p>Reliable and secure network infrastructure design & support.</p>
-          </div>
-          <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
-            <h3 class="font-semibold text-lg mb-2">Server & Active Directory</h3>
-            <p>Centralized user and resource management built for scale.</p>
-          </div>
-          <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
-            <h3 class="font-semibold text-lg mb-2">Cybersecurity</h3>
-            <p>Endpoint protection, threat detection & response, and more.</p>
-          </div>
-          <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
-            <h3 class="font-semibold text-lg mb-2">HIPAA Compliance</h3>
-            <p>Ensure compliance with HIPAA standards in all your systems.</p>
-          </div>
-          <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
-            <h3 class="font-semibold text-lg mb-2">Patch Management</h3>
-            <p>Timely OS and software updates to reduce vulnerabilities.</p>
-          </div>
-        </div>
+  <!-- Services -->
+  <section id="services" class="py-20 bg-gray-50 text-center">
+    <h2 class="text-3xl font-bold mb-10">What We Offer</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 max-w-6xl mx-auto">
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
+        <h3 class="font-semibold text-lg mb-2">Helpdesk Support</h3>
+        <p>Responsive IT support when your staff needs help the most.</p>
       </div>
-    </section>
-
-    <!-- Case Studies Slide-In Panel -->
-    <div
-      class="fixed inset-0 bg-black bg-opacity-50 flex justify-end z-50 transition-all"
-      x-show="open"
-      x-transition:enter="transition ease-out duration-300"
-      x-transition:enter-start="opacity-0"
-      x-transition:enter-end="opacity-100"
-      x-transition:leave="transition ease-in duration-200"
-      x-transition:leave-start="opacity-100"
-      x-transition:leave-end="opacity-0"
-      @click.self="open = false"
-    >
-      <aside
-        class="bg-white w-full sm:w-[500px] h-full p-8 overflow-y-auto shadow-lg text-gray-900"
-        x-show="open"
-        x-transition:enter="transform transition ease-out duration-300"
-        x-transition:enter-start="translate-x-full"
-        x-transition:enter-end="translate-x-0"
-        x-transition:leave="transform transition ease-in duration-200"
-        x-transition:leave-start="translate-x-0"
-        x-transition:leave-end="translate-x-full"
-      >
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-2xl font-bold">Case Studies</h2>
-          <button @click="open = false" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
-        </div>
-        <div class="space-y-6">
-          <div>
-            <h3 class="text-lg font-semibold">Healthcare Practice: HIPAA Violation Fines</h3>
-            <p class="text-sm mt-1">
-              A Phoenix-based clinic was fined $125,000 for failing to encrypt patient records. Vega IT Services helped a similar
-              practice secure all systems and avoid violations by implementing endpoint encryption, patch automation, and
-              access controls.
-            </p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold">Dental Office Ransomware Attack</h3>
-            <p class="text-sm mt-1">
-              A Tempe dental office lost all patient records to a ransomware attack. Vega IT Services offers real-time patching
-              and threat detection to prevent these breaches in other client environments.
-            </p>
-          </div>
-        </div>
-      </aside>
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
+        <h3 class="font-semibold text-lg mb-2">Networking & Wi-Fi</h3>
+        <p>Enterprise-grade networking for secure and fast connectivity.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
+        <h3 class="font-semibold text-lg mb-2">Active Directory Setup</h3>
+        <p>Centralized identity management to streamline user access.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
+        <h3 class="font-semibold text-lg mb-2">Cybersecurity</h3>
+        <p>Threat detection, endpoint protection, patching, and compliance.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
+        <h3 class="font-semibold text-lg mb-2">HIPAA & Compliance</h3>
+        <p>Ensure regulatory compliance across healthcare IT environments.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
+        <h3 class="font-semibold text-lg mb-2">Patch Management</h3>
+        <p>Stay secure with zero-day patching and regular updates.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
-      <div class="max-w-xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-        <form class="space-y-4 text-left">
-          <input type="text" placeholder="Your Name" class="w-full border px-4 py-3 rounded" />
-          <input type="email" placeholder="Your Email" class="w-full border px-4 py-3 rounded" />
-          <textarea
-            rows="4"
-            placeholder="Tell us how we can help."
-            class="w-full border px-4 py-3 rounded"
-          ></textarea>
-          <button
-            type="submit"
-            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition"
-          >
-            Send Message
-          </button>
-        </form>
+  <!-- Case Studies Panel -->
+  <div x-data="{ showCase: false }">
+    <div x-show="showCase" x-transition class="fixed inset-0 bg-black bg-opacity-50 z-40" @click="showCase = false"></div>
+    <div x-show="showCase" x-transition class="fixed top-0 right-0 w-full md:w-1/2 h-full bg-gray-900 text-white z-50 shadow-lg p-8 overflow-y-auto">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-semibold">Case Studies</h2>
+        <button @click="showCase = false" class="text-white text-xl">&times;</button>
       </div>
-    </section>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-lg font-bold">Healthcare Practice: HIPAA Violation Fines</h3>
+          <p class="mt-1">A Phoenix-based clinic was fined $125,000 for failing to encrypt patient records. Vega IT Services helped a similar practice secure all systems and avoid violations by implementing endpoint encryption, patch automation, and access controls.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold">Dental Office Ransomware Attack</h3>
+          <p class="mt-1">A Tempe dental office lost all patient records to a ransomware attack. Vega IT Services offers real-time patching and threat detection to prevent these breaches in other client environments.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white text-center py-6 text-sm">
-      © 2025 Vega IT Services | Phoenix, AZ
-    </footer>
-  </body>
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-white text-center">
+    <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+    <form class="max-w-xl mx-auto space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <input type="email" placeholder="Your Email" class="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <textarea placeholder="Tell us how we can help." rows="5" class="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>&copy; 2025 Vega IT Services | Phoenix, AZ</p>
+  </footer>
+</body>
 </html>
